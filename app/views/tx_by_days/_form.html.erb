@@ -1,0 +1,17 @@
+<%= form_for(@tx_by_day) do |f| %>
+  <% if @tx_by_day.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tx_by_day.errors.count, "error") %> prohibited this tx_by_day from being saved:</h2>
+
+      <ul>
+      <% @tx_by_day.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

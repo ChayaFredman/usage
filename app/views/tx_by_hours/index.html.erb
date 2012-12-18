@@ -1,0 +1,26 @@
+<h1>Listing tx_by_hours</h1>
+
+<table>
+  <tr>
+    <th>tx</th>
+    <th>date</th>
+    <th>hour</th>
+    <th>count seconds</th>
+  </tr>
+
+<% @tx_by_hours.each do |tx_by_hour| %>
+  <tr>
+    <td><%=tx_by_hour.tx%></td>
+    <td><%=tx_by_hour.date1%></td>
+    <td><%=tx_by_hour.hour%></td>
+    <td><%=tx_by_hour.count_seconds%></td>
+    <td><%= link_to 'Show', tx_by_hour %></td>
+    <td><%= link_to 'Edit', edit_tx_by_hour_path(tx_by_hour) %></td>
+    <td><%= link_to 'Destroy', tx_by_hour, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tx by hour', new_tx_by_hour_path %>

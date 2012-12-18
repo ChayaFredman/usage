@@ -2,13 +2,16 @@
 
 <table>
   <tr>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>tx</th>
+    <th>date</th>
+    <th>count minutes</th>
   </tr>
 
 <% @tx_by_days.each do |tx_by_day| %>
   <tr>
+    <td><%=tx_by_day.tx%></td>
+    <td><%=tx_by_day.date1%></td>
+    <td><%=tx_by_day.count_minutes%></td>
     <td><%= link_to 'Show', tx_by_day %></td>
     <td><%= link_to 'Edit', edit_tx_by_day_path(tx_by_day) %></td>
     <td><%= link_to 'Destroy', tx_by_day, method: :delete, data: { confirm: 'Are you sure?' } %></td>

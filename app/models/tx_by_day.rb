@@ -3,5 +3,5 @@ class TxByDay < ActiveRecord::Base
  # def search_tx
  #	@tx_by_day = TxByDay.find(params[:id])
   #end
-  set_table_name "tx_by_days"
+  self.table_name = "tx_by_days"
 end

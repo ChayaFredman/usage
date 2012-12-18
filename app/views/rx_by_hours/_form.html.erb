@@ -1,0 +1,17 @@
+<%= form_for(@rx_by_hour) do |f| %>
+  <% if @rx_by_hour.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rx_by_hour.errors.count, "error") %> prohibited this rx_by_hour from being saved:</h2>
+
+      <ul>
+      <% @rx_by_hour.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

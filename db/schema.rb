@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20121216070320) do
 
   create_table "rx_by_days", :force => true do |t|
     t.string "rx",            :limit => 50
@@ -19,10 +19,24 @@ ActiveRecord::Schema.define(:version => 0) do
     t.string "count_minutes", :limit => 50
   end
 
+  create_table "rx_by_hours", :primary_key => "Id", :force => true do |t|
+    t.string "rx",            :limit => 50
+    t.string "date1",         :limit => 50
+    t.string "hour",          :limit => 50
+    t.string "count_seconds", :limit => 50
+  end
+
   create_table "tx_by_days", :force => true do |t|
     t.string "tx",            :limit => 50
     t.string "date1",         :limit => 50
     t.string "count_minutes", :limit => 50
+  end
+
+  create_table "tx_by_hours", :primary_key => "Id", :force => true do |t|
+    t.string "tx",            :limit => 50
+    t.string "date1",         :limit => 50
+    t.string "hour",          :limit => 50
+    t.string "count_seconds", :limit => 50
   end
 
 end

@@ -1,0 +1,26 @@
+<h1>Listing rx_by_hours</h1>
+
+<table>
+  <tr>
+     <th>rx</th>
+    <th>date</th>
+    <th>hour</th>
+    <th>count seconds</th>
+  </tr>
+
+<% @rx_by_hours.each do |rx_by_hour| %>
+  <tr>
+     <td><%=rx_by_hour.rx%></td>
+    <td><%=rx_by_hour.date1%></td>
+    <td><%=rx_by_hour.hour%></td>
+    <td><%=rx_by_hour.count_seconds%></td>
+    <td><%= link_to 'Show', rx_by_hour %></td>
+    <td><%= link_to 'Edit', edit_rx_by_hour_path(rx_by_hour) %></td>
+    <td><%= link_to 'Destroy', rx_by_hour, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Rx by hour', new_rx_by_hour_path %>

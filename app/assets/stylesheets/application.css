@@ -11,3 +11,142 @@
  *= require_self
  *= require_tree .
  */
+
+header
+{
+	color: #ffaa56;
+	text-align: center;
+	font-size: 40px;
+} 
+table {
+
+	margin:0px;padding:0px;
+
+	
+	box-shadow: 10px 10px 5px #888888;
+
+	border:1px solid #776a6a;
+
+	
+
+	-moz-border-radius-bottomleft:5px;
+
+	-webkit-border-bottom-left-radius:5px;
+
+	border-bottom-left-radius:5px;
+
+	
+
+	-moz-border-radius-bottomright:5px;
+
+	-webkit-border-bottom-right-radius:5px;
+
+	border-bottom-right-radius:5px;
+
+	
+
+	-moz-border-radius-topright:5px;
+
+	-webkit-border-top-right-radius:5px;
+
+	border-top-right-radius:5px;
+
+	
+
+	-moz-border-radius-topleft:5px;
+
+	-webkit-border-top-left-radius:5px;
+
+	border-top-left-radius:5px;
+
+} table{
+
+	width:50%;
+
+	height:70%;
+
+	margin:auto;
+
+}
+
+table td{
+
+	vertical-align:middle;
+
+	background:-o-linear-gradient(bottom, #ffaa56 5%, #ffffff 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffaa56), color-stop(1, #ffffff) ); 
+	background:-moz-linear-gradient( center top, #ffaa56 5%, #ffffff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffaa56", endColorstr="#ffffff");	background: -o-linear-gradient(top,#ffaa56,ffffff);
+
+
+	background-color:#ffaa56;
+
+
+	border:1px solid #776a6a;
+
+	border-width:0px 1px 1px 0px;
+
+	text-align:left;
+
+	padding:5px;
+
+	font-size:14px;
+
+	font-family:Arial;
+
+	font-weight:bold;
+
+	color:#000000;
+
+}
+
+table th{
+
+		background:-o-linear-gradient(bottom, #ff7f00 5%, #bf5f00 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff7f00), color-stop(1, #bf5f00) );
+	background:-moz-linear-gradient( center top, #ff7f00 5%, #bf5f00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff7f00", endColorstr="#bf5f00");	background: -o-linear-gradient(top,#ff7f00,bf5f00);
+
+
+	background-color:#ff7f00;
+
+	border:0px solid #776a6a;
+
+	text-align:center;
+
+	border-width:0px 0px 1px 1px;
+
+	font-size:22px;
+
+	font-family:Arial;
+
+	font-weight:bold;
+
+	color:#ffffff;
+
+	height: 24px;
+
+}
+
+
+
+ h1 {
+ 	font-size: 35px;
+    text-align: center;
+}
+
+#txsearch
+{
+	color: gray;
+	float: right;
+	background-color:white; 
+}
+
+a {
+	
+	font-size: 20px;
+	margin-left: 40px;
+	color: blue;
+}
+table tr td div
+{
+	width: 700px%;
+}

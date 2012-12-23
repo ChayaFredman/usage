@@ -1,11 +1,20 @@
-<h1>Listing tx_by_hours</h1>
+<h1>Listing tx_by_hours</h1><br>
+<%= link_to 'rx by days', rx_by_days_path %>
+<%= link_to 'tx by days', tx_by_days_path %>
+<%= link_to 'rx by hours', rx_by_hours_path %>
+<%= link_to 'tx by hours', tx_by_hours_path %>
+<br>
+<br>
+<br>
+<input type="text" id="txsearch" value="search"></input> 
+<br />
 
 <table>
   <tr>
     <th>tx</th>
     <th>date</th>
     <th>hour</th>
-    <th>count seconds</th>
+    <th>usage minutes</th>
   </tr>
 
 <% @tx_by_hours.each do |tx_by_hour| %>
@@ -13,14 +22,11 @@
     <td><%=tx_by_hour.tx%></td>
     <td><%=tx_by_hour.date1%></td>
     <td><%=tx_by_hour.hour%></td>
-    <td><%=tx_by_hour.count_seconds%></td>
-    <td><%= link_to 'Show', tx_by_hour %></td>
-    <td><%= link_to 'Edit', edit_tx_by_hour_path(tx_by_hour) %></td>
-    <td><%= link_to 'Destroy', tx_by_hour, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= "%.2f" % (((tx_by_hour.count_seconds).to_f)/60)%></td>
+    
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Tx by hour', new_tx_by_hour_path %>

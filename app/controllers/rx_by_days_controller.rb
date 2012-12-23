@@ -80,4 +80,34 @@ class RxByDaysController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+
+
+def rx_days_hours
+  render :rx_days_hours
+end
+
+def rx_h
+   begin
+     rxs = []
+     records = []
+     rxs =RxByHour.where(:rx => params[:rx],:date1 => params[:date1])
+     
+     rxs.each do |rec|
+       rec["hour"] = rec.hour  
+       rec["count_seconds"] = rec.count_seconds
+       records << rec
+     end
+
+     @data=records
+     render :partial => 'referrals_sub_table'
+     
+    rescue Exception => exc
+      logger.info exc.inspect
+      render :json=> exc.inspect
+    end  
+
+end
+
 end

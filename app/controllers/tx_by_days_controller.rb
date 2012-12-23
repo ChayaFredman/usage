@@ -80,4 +80,27 @@ class TxByDaysController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def tx_h
+   begin
+     txs = []
+     records = []
+     txs =TxByHour.where(:tx => params[:tx],:date1 => params[:date1])
+     
+     txs.each do |rec|
+       rec["hour"] = rec.hour  
+       rec["count_seconds"] = rec.count_seconds
+       records << rec
+     end
+
+     @data=records
+     p "================================================" ,@data
+     render :partial => 'referrals_sub_table'
+     # render :json => records
+    rescue Exception => exc
+      logger.info exc.inspect
+      render :json=> exc.inspect
+    end  
+
+end
 end

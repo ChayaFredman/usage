@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th>hour</th>
+    <th>usage minutes </th>
+  </tr>
+
+<% @data.each do |d| %>
+  <tr>
+     <td><%=d.hour%></td>
+      <td><%= "%.2f" % (((d.count_seconds).to_f)/60)%> </td>
+   
+  </tr>
+<% end %>
+</table>

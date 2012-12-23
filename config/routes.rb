@@ -2,15 +2,36 @@ Usage::Application.routes.draw do
 
    
   resources :rx_by_hours
+  get "application/index"
+  # resources :applications do
+  # collection do
+  #       get
+  #       "rx_h"
+  #        end
+  #      end
 
-
+# resources :rx_days_hours
   resources :tx_by_hours
 
+get "tx_by_days/index"
+  resources :tx_by_days do
+    collection do
+        get 'tx_h'
+         end
+       end
+  
+  get "rx_by_days/index"
+  resources :rx_by_days do
+    collection do
+        get 'rx_h','rx_days_hours'
+         end
+       end
 
-  resources :rx_by_days
-  resources :tx_by_days
+  #get "tx_by_day/index"
 
-  get "tx_by_day/index"
+ 
+
+
   # get "rx_by_days/index"
 
   # The priority is based upon order of creation:
@@ -62,7 +83,7 @@ Usage::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => "tx_by_days#index"
+   root :to => "application#index"
 
   # See how all your routes lay out with "rake routes"
 

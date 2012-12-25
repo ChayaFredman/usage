@@ -4,4 +4,6 @@ class TxByDay < ActiveRecord::Base
  #	@tx_by_day = TxByDay.find(params[:id])
   #end
   self.table_name = "tx_by_days"
+
+
 end

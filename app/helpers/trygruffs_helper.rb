@@ -1,0 +1,2 @@
+module TrygruffsHelper
+end

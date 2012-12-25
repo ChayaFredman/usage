@@ -15,92 +15,14 @@
 //= require_tree .
 
 $(document).ready( function (){
+	alert("application");
+			var c=""
+	 		$('#txsearch').keyup(function(){
+			 	var d=c
+			 	c=$('#txsearch').val()
+				$("td:contains("+d+")").css('background','#ffaa56');
+	   	    	$("td:contains("+c+")").css('background','red');		
+			});
 
-	// $('#txsearch').focus(function(){
-	// 	$(this).val("")});
-var c=""
-	 $('#txsearch').keyup(function(){
 			
-	 	// $("document").search($('#txsearch').val())
-	 	// .css('background-color', 'red')	
-// $("document").search($('#txsearch').val())},function(){$('table').css('background-color', 'red')
-		 	var d=c
-		 	c=$('#txsearch').val()
-		 	
-   	    	// $("td:contains("+d+")").toggleClass("class1").css();
-   	    	// // $("td:contains("+d+")").css();
-   	    	// $("td:contains("+c+")").toggleClass("class2").css();
-
-$("td:contains("+d+")").css('background','#ffaa56');
-   	    	// $("td:contains("+d+")").css();
-   	    	$("td:contains("+c+")").css('background','red');
-
-   	    	// .css('background', 'red');
-		// $("document:contains('$('#txsearch').val()')").css('background-color', 'red')
-		// .find($('#txsearch').val()).css('background-color', 'red')
-		
-	});
-
-$('.rxchange').live('click',function(){
-	 	$(this).toggleClass("rxminus");
-	    $(this).toggleClass("rxplus");
-	 	current_tr = $(this).closest("tr");
- 		rx = current_tr.children(':first-child').next().text();
-	    date1 = current_tr.children(':first-child').next().next().text();
-	   
-		
-		 if($(this).attr('class')=="rxchange rxminus"){
-			$(this).html("-");
-	      current_tr.after('<tr class="extendedRowTable"><td colspan=" '+ current_tr.children("td").length + '"></td></tr>')
-          $.ajax({
-			type: "get",
-			url: "rx_by_days/rx_h",
-		   data: "rx="+rx+"&date1="+date1,
-		  success: function(data){
-            	current_tr.next().children().html(data);
-            	
-            }
-		});	
-			
-		}
-		 else 
-		{
-			$(this).html("+");
-			current_tr.next().remove();
-		}
-		});	
-
-
-$('.txchange').live('click',function(){
-	 	$(this).toggleClass("txminus");
-	 	$(this).toggleClass("txplus");
-	 	current_tr = $(this).closest("tr");
- 		tx = current_tr.children(':first-child').next().text();
-	    date1 = current_tr.children(':first-child').next().next().text();
-	   
-		
-		 if($(this).attr('class')=="txchange txminus"){
-			$(this).html("-");
-	      current_tr.after('<tr class="extendedRowTable"><td colspan=" '+ current_tr.children("td").length + '"></td></tr>')
-          $.ajax({
-			type: "get",
-			url: "tx_by_days/tx_h",
-		   data: "tx="+tx+"&date1="+date1,
-		  success: function(data){
-            	current_tr.next().children().html(data);
-            	
-            }
-		});	
-			
-		}
-		 else 
-		{
-			$(this).html("+");
-			current_tr.next().remove();
-		}
-		});	
-	
-
-
-
 });

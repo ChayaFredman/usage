@@ -1,3 +1,5 @@
+<h1>Listing tx_to_dates</h1><br>
+
 <%= link_to 'rx by days', rx_by_days_path %>
 <%= link_to 'tx by days', tx_by_days_path %>
 <%= link_to 'rx by hours', rx_by_hours_path %>
@@ -8,24 +10,29 @@
 
 <input type="text" id="txsearch" value="search"></input> 
 <br />
-<table>
+<table id="tb">
+  
+  <thead>
   <tr>
-    <th></th>
-    <th>tx</th>
+    
     <th>date</th>
-    <th>usage minutes</th>
+     <th>sum</th>
   </tr>
-
+</thead>
 <% @tx_by_days.each do |tx_by_day| %>
+  <tbody>
   <tr>
-    <td class="txchange txplus">+</td>
-    <td><%=tx_by_day.tx%></td>
-    <td><%=tx_by_day.date1%></td>
-    <td><%= "%.2f" % (((tx_by_day.count_minutes).to_f)/60)%></td>
+      <th><%=tx_by_day.date1%></th>
+  <td><%="%.2f" %((tx_by_day.count_minutes.to_f)/60)%></td>
    
   </tr>
 <% end %>
+</tbody>
 </table>
 
 <br />
+<div id="container"></div>
 
+
+  
+ 

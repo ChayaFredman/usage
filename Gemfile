@@ -9,6 +9,8 @@ gem 'mysql'
 gem 'mysql2'
 gem 'libv8', '~> 3.11.8'
 gem 'therubyracer'
+gem 'gruff'
+gem "lazy_high_charts", "~> 1.3.2"
 
 
 # Gems used only for assets and not required
@@ -25,7 +27,7 @@ end
 # gem  'activerecord-mysql2-adapter'
 
 gem 'jquery-rails'
-
+gem 'rmagick'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

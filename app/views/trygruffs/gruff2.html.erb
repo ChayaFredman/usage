@@ -1,0 +1,43 @@
+<!-- <h1>welcome gruff 2!!!!!!!!!</h1>
+<div id="container"></div>
+
+<table id="datatable2">
+  <thead>
+  <tr>
+   
+   <th>hour</th> 
+   <th>usage minutes </th>
+  </tr>
+  </thead>
+
+<% @tx_by_days.each do |tx_by_hour| if tx_by_hour.tx=="112233445566" %>
+<tbody>
+  <tr>
+   
+      <th class="thour'"><%=tx_by_hour.hour%></th>  
+    <td><%= "%.2f" % (((tx_by_hour.count_seconds).to_f)/60)%> </td>  
+  </tr>
+  <%end 
+    end  %> 
+  </tbody>
+</table>
+
+
+<table id="datatable2">
+  <thead>
+  <tr>
+   <th>date</th> 
+  </tr>
+  </thead>
+
+<% @tx_by_days.select do |tx_by_hour| if tx_by_hour.tx=="112233445566" %>
+<tbody>
+  <tr>
+   
+      <th class="thour'"><%=tx_by_hour.hour%></th>  
+    <td><%= "%.2f" % (((tx_by_hour.count_seconds).to_f)/60)%> </td>
+  </tr>
+  <%end 
+    end  %> 
+  </tbody>
+</table> -->

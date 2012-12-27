@@ -1,11 +1,11 @@
 $(function () {
-   //  // On document ready, call visualize on the datatable.
-   //  // $(document).ready(function() {
-   //      /**
-   //       * Visualize an HTML table using Highcharts. The top (horizontal) header
-   //       * is used for series names, and the left (vertical) header is used
-   //       * for category names. This function is based on jQuery.
-   //       * @param {Object} table The reference to the HTML table to visualize
+    // On document ready, call visualize on the datatable.
+    // $(document).ready(function() {
+        /**
+         * Visualize an HTML table using Highcharts. The top (horizontal) header
+         * is used for series names, and the left (vertical) header is used
+         * for category names. This function is based on jQuery.
+         * @param {Object} table The reference to the HTML table to visualize
    //       * @param {Object} options Highcharts options
    //       */
    //      alert("trygruff");
@@ -63,9 +63,11 @@ $(function () {
    //          }
    //      };
 
-  
+   // //       alert("אחרי הגדרת הoptions'");
+   // // alert("לפני הגדרת השליחה לפונק'");
 
    // Highcharts.visualize(table,options);
-     
+   //     // alert("אחרי השליחה לפונקציה'");
+   //  // });
     
 })

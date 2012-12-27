@@ -21,8 +21,10 @@ $(document).ready( function (){
 			 	var d=c
 			 	c=$('#txsearch').val()
 				$("td:contains("+d+")").css('background','#ffaa56');
-	   	    	$("td:contains("+c+")").css('background','red');		
+	   	    	$("td:contains("+c+")").css('background','red');
+	   	    	$("th:contains("+d+")").css('background','#ffaa56');
+	   	    	$("th:contains("+c+")").css('background','red');		
 			});
 
-			
+
 });

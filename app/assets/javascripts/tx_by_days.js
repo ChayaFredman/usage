@@ -3,7 +3,7 @@
 //# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 $(document).ready( function (){
 $('.txchange').live('click',function(){
-				alert("tx_by_days");
+				
 	 			$(this).toggleClass("txminus");
 	 			$(this).toggleClass("txplus");
 	 			current_tr = $(this).closest("tr");

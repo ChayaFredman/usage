@@ -34,6 +34,9 @@ get "tx_by_days/index"
  get "tx_to_dates/index"
   resources :tx_to_dates
 
+get "tx_group_dates/index"
+  resources :tx_group_dates
+
   # get "rx_by_days/index"
 
   # The priority is based upon order of creation:

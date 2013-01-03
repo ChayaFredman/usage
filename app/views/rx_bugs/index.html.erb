@@ -1,0 +1,36 @@
+<h1>a list bugs of rx that have on the same time more than one </h1><br>
+
+<%= link_to 'rx by days', rx_by_days_path %>
+<%= link_to 'tx by days', tx_by_days_path %>
+<%= link_to 'rx by hours', rx_by_hours_path %>
+<%= link_to 'tx by hours', tx_by_hours_path %>
+<br>
+<br>
+<br>
+<input type="text" id="txsearch" value="search"></input> 
+<br />
+
+<table>
+  <tr>
+    <th>rx</th>
+    <th>tx</th>
+    <th>tx1</th>
+    <th>start_time tx</th>
+    <th>end_time tx</th>
+    <th>start_time tx1</th>
+  
+   </tr>
+
+<% @rx_bugs.each do |rx_bug| %>
+  <tr>
+    <td><%=rx_bug.rx%></td>
+    <td><%=rx_bug.tx%></td>
+    <td><%=rx_bug.tx1%></td>
+    <td><%=rx_bug.start_time%></td>
+    <td><%=rx_bug.end_time%></td>
+    <td><%=rx_bug.start_time1%></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

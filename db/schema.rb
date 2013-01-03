@@ -13,6 +13,21 @@
 
 ActiveRecord::Schema.define(:version => 20121216070320) do
 
+  create_table "rx_bugs", :id => false, :force => true do |t|
+    t.string "rx",               :limit => 50
+    t.string "tx",               :limit => 50
+    t.string "start_time",       :limit => 50
+    t.string "end_time",         :limit => 50
+    t.string "id_events_start",  :limit => 50
+    t.string "id_events",        :limit => 50
+    t.string "rx1",              :limit => 50
+    t.string "tx1",              :limit => 50
+    t.string "start_time1",      :limit => 50
+    t.string "end_time1",        :limit => 50
+    t.string "id_events_start1", :limit => 50
+    t.string "id_events1",       :limit => 50
+  end
+
   create_table "rx_by_days", :force => true do |t|
     t.string "rx",            :limit => 50
     t.string "date1",         :limit => 50

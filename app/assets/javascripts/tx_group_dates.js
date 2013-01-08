@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	//debugger;
  //var table2 = document.getElementById('tdetails');
-
+alert("tx_group_dates");
  var d="";
         /**
          * Visualize an HTML table using Highcharts. The top (horizontal) header
@@ -20,7 +20,7 @@ $(document).ready(function() {
               	counter = counter + 1;
 
             });
-            alert(counter);
+            //alert(counter);
      // $('.tr2', table).each( function(i) {
      // 	var tr=this;
      // 	$('.thh',tr).each( function(j) {

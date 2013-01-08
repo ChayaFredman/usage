@@ -22,8 +22,12 @@ development:
 #   pool: 5
 #   timeout: 5000
 
-# production:
-#   adapter: mysql
-#   database: db/production.mysql
-#   pool: 5
-#   timeout: 5000
+production:
+  adapter: mysql2
+  database: my_usage
+  encoding: utf8
+  pool: 5
+  timeout: 5000
+  username: root
+  password:
+  host: localhost

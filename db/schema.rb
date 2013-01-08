@@ -56,5 +56,4 @@ ActiveRecord::Schema.define(:version => 20130107131516) do
     t.string "hour",          :limit => 50
     t.string "count_seconds", :limit => 50
   end
-
 end

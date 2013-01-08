@@ -1,6 +1,6 @@
 
 $(document).ready( function (){
-	alert("tx_by_days");
+	
 $('.txchange').live('click',function(){
 				
 	 			$(this).toggleClass("txminus");

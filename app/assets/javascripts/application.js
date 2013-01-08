@@ -14,7 +14,6 @@
 //= require jquery_ujs
 
 $(document).ready( function (){
-	alert("application");
 			var c=""
 	 		$('#txsearch').keyup(function(){
 			 	var d=c

@@ -3,7 +3,6 @@
 // # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 // $(function () {
 $(document).ready( function (){
-alert("rx_by_days");
 
 $('.rxchange').live('click',function(){
 

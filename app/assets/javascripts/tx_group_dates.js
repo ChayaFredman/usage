@@ -1,7 +1,7 @@
 $(document).ready(function() {
-	//debugger;
- //var table2 = document.getElementById('tdetails');
-alert("tx_group_dates");
+	
+ 
+
  var d="";
         /**
          * Visualize an HTML table using Highcharts. The top (horizontal) header
@@ -10,7 +10,7 @@ alert("tx_group_dates");
          * @param {Object} table The reference to the HTML table to visualize
          * @param {Object} options Highcharts options
          */
-        // alert("ניסיון חדש");
+        
          Highcharts.visualize = function(table, table2, options) {
             // the categories
             var counter = 0;
@@ -20,27 +20,7 @@ alert("tx_group_dates");
               	counter = counter + 1;
 
             });
-            //alert(counter);
-     // $('.tr2', table).each( function(i) {
-     // 	var tr=this;
-     // 	$('.thh',tr).each( function(j) {
-     // 		 var tr=this;
-     // 		 if(i==0 && j==0)
-     // 		 {
-     //       options.series: [{
-     //        data: [{
-     //            name: $(tr).text(),
-     //            color: '#00FF00',
-     //            y: 1
-            
-     //        }]
-     //     }]
-     //     alert(options.series);
-     // }
-     //    });
-        
-     //    });
-
+     
 
      // the data series
             options.series = [];
@@ -48,16 +28,12 @@ alert("tx_group_dates");
    
 			$('.tr2', table).each( function(i) {
 				 var tr=this;
-
-				 // alert("לולאה חיצונית");
-				// $('th,td',tr).each( function(i) {
-					$('.trr',tr).each( function(j) {
+						$('.trr',tr).each( function(j) {
 						var h = $(this).children('.thh').first();
 						var d = $(this).children('.tdd').first();
 						txIdx = txIdx + 1;
-					// alert("לולאה פנימית");
-					var preData = new Array(counter);
-					 var counter2 = counter;
+						var preData = new Array(counter);
+					    var counter2 = counter;
 					    while (--counter2 >= 0) {
 					        preData[counter2] = null;
 					    }
@@ -65,14 +41,11 @@ alert("tx_group_dates");
 					options.series[txIdx]={
 						name:$(h).text(),
 						data:preData
-						//options.series[j].data.push(parseFloat($('.tdd').innerHTML))
+						
 					};
 				console.log(options.series[i])
 				
-				
-				 // options.series[i].data.push(parseFloat($(t).innerHTML));
-     //             alert(options.series[i].data);
-								
+												
 				});
 				
 			});
@@ -80,7 +53,7 @@ alert("tx_group_dates");
             var chart = new Highcharts.Chart(options);
 
         }
-   // alert("לפני הגדרת הtable'");
+   
         
 
         var table = document.getElementById('table_tx'), 

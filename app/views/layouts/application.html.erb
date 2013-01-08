@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- // <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-  // <script src="/highcharts.js" type="text/javascript"></script> -->
+ 
   <title>Usage</title>
   <%= stylesheet_link_tag "application" ,controller_name%>
-    
   <%= javascript_include_tag "application" ,controller_name  %>
-  
-  
-  
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+<header>
+    
+      <span><%= link_to_unless_current('rx by days',rx_by_days_path) %> </span>
+       <span><%= link_to_unless_current('tx by days',tx_by_days_path) %> </span>
+        <span><%= link_to_unless_current('rx by hours',rx_by_hours_path) %> </span>
+        <span><%= link_to_unless_current('tx by hours',tx_by_hours_path) %> </span>
+        <span><%= link_to_unless_current('tx group dates', tx_group_dates_path) %></span>
+        <span><%= link_to_unless_current 'trygruffs', trygruffs_path %></span>
+        <span><%= link_to_unless_current 'tx to dates', tx_to_dates_path %></span>
+         
+      
+</header>
+<input type="text" id="txsearch" placeholder="search"></input> 
 <%= yield %>
 
 </body>
 </html>
+
+
+
+

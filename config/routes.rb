@@ -28,7 +28,7 @@ get "tx_by_days/index"
        end
 
   #get "tx_by_day/index"
-  get "trygruffs/index"
+  get "trygruff/index"
   resources :trygruffs
  
  get "tx_to_dates/index"

@@ -11,21 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121216070320) do
+ActiveRecord::Schema.define(:version => 20130107131516) do
 
-  create_table "rx_bugs", :id => false, :force => true do |t|
-    t.string "rx",               :limit => 50
-    t.string "tx",               :limit => 50
-    t.string "start_time",       :limit => 50
-    t.string "end_time",         :limit => 50
-    t.string "id_events_start",  :limit => 50
-    t.string "id_events",        :limit => 50
-    t.string "rx1",              :limit => 50
-    t.string "tx1",              :limit => 50
-    t.string "start_time1",      :limit => 50
-    t.string "end_time1",        :limit => 50
-    t.string "id_events_start1", :limit => 50
-    t.string "id_events1",       :limit => 50
+  create_table "rx_bugs", :force => true do |t|
+    t.string   "rx"
+    t.string   "tx"
+    t.string   "start_time"
+    t.string   "end_time"
+    t.string   "id_events_start"
+    t.string   "id_events"
+    t.string   "rx1"
+    t.string   "tx1"
+    t.string   "start_time1"
+    t.string   "end_time1"
+    t.string   "id_events_start1"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "rx_by_days", :force => true do |t|
@@ -34,11 +35,13 @@ ActiveRecord::Schema.define(:version => 20121216070320) do
     t.string "count_minutes", :limit => 50
   end
 
-  create_table "rx_by_hours", :primary_key => "Id", :force => true do |t|
-    t.string "rx",            :limit => 50
-    t.string "date1",         :limit => 50
-    t.string "hour",          :limit => 50
-    t.string "count_seconds", :limit => 50
+  create_table "rx_by_hours", :force => true do |t|
+    t.string   "rx"
+    t.string   "date1"
+    t.string   "hour"
+    t.string   "count_seconds"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "tx_by_days", :force => true do |t|

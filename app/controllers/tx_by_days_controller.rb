@@ -103,6 +103,8 @@ class TxByDaysController < ApplicationController
     end  
   end
 
+ 
+
   
 
 end

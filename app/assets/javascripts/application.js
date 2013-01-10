@@ -18,9 +18,9 @@ $(document).ready( function (){
 	 		$('#txsearch').keyup(function(){
 			 	var d=c
 			 	c=$('#txsearch').val()
-				$("td:contains("+d+")").css('background','#ffaa56');
+				$("td:contains("+d+")").css('background','#F0F0F0');
 	   	    	$("td:contains("+c+")").css('background','red');
-	   	    	$("th:contains("+d+")").css('background','#ffaa56');
+	   	    	$("th:contains("+d+")").css('background','#F0F0F0');
 	   	    	$("th:contains("+c+")").css('background','red');		
 			});
 

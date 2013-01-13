@@ -8,13 +8,15 @@
 </head>
 <body>
   <div id="header">
+
       <span><%= link_to_unless_current('rx by days',rx_by_days_path) %> </span>
-       <span><%= link_to_unless_current('tx by days',tx_by_days_path) %> </span>
-        <span><%= link_to_unless_current('rx by hours',rx_by_hours_path) %> </span>
-        <span><%= link_to_unless_current('tx by hours',tx_by_hours_path) %> </span>
-        <span><%= link_to_unless_current('tx group dates', tx_group_dates_path) %></span>
-        <span><%= link_to_unless_current 'trygruffs', trygruffs_path %></span>
-        <span><%= link_to_unless_current 'tx to dates', tx_to_dates_path %></span>
+      <span><%= link_to_unless_current('tx by days',tx_by_days_path) %> </span>
+      <span><%= link_to_unless_current('rx by hours',rx_by_hours_path) %> </span>
+      <span><%= link_to_unless_current('tx by hours',tx_by_hours_path) %> </span>
+      <span><%= link_to_unless_current('tx to dates',tx_to_dates_path) %> </span>
+      <span><%= link_to_unless_current('trygruffs',trygruffs_path) %> </span>
+      <span><%= link_to_unless_current('tx group dates',tx_group_dates_path) %></span>
+        
 </div>
 <br>
 <div id="content">
@@ -22,8 +24,10 @@
   <img alt="Search" height="20" src="/assets/Search.ico" title="search " width="20">
 <%= yield %>
 </div>
-</body>
-
+<div id="footer">
+    © 2012 - Powermat &amp; Tribase
+  </div>
+  </body>
 </html>
 
 

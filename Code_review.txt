@@ -1,0 +1,12 @@
+Hi.
+
+1. I didn't understand why you need the TxGroupDate model.
+2. Please keep the code order and proper indentation, if you want other people to read your code without a mess.
+3. Remove any method you don't need in the controllers, or files you don't use as helpers etc. Keep the code thin.
+4. 'Trygruff' shouldn't need to be an ActiveRecord model, Am I right?
+5. If you have a full DB then I will be able to play with the views and check the JS code. Thanks.
+6. 'date1' is a strange name for column, sorry.
+
+This all for now.
+Good Luck!!!
+

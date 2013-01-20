@@ -1,31 +1,30 @@
 <%= javascript_include_tag "highcharts" %>
-<h1>show to every day the sum of usage with tx</h1>
+<h1>Daily usage summary for each TX</h1>
 <br>
 <br>
 
 <table id="tb" class="table">
-  
+
   <thead>
-  <tr>
-    
-    <th>date</th>
-     <th>sum</th>
-  </tr>
-</thead>
-<% @tx_by_days.each do |tx_by_day| %>
+    <tr>
+
+      <th>date</th>
+      <th>sum</th>
+    </tr>
+  </thead>
+  <% @tx_by_days.each do |tx_by_day| %>
   <tbody>
-  <tr>
+    <tr>
       <th><%=tx_by_day.date1%></th>
-  <td><%="%.2f" %((tx_by_day.count_minutes.to_f)/60)%></td>
-   
-  </tr>
-<% end %>
-</tbody>
+      <td><%="%.2f" %((tx_by_day.count_minutes.to_f)/60)%></td>
+
+    </tr>
+    <% end %>
+  </tbody>
 </table>
 
 <br />
 <div id="container"></div>
 
 
-  
- 
+

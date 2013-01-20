@@ -4,21 +4,21 @@
 
 <table id="rs" class="table">
   <tr>
-     <th>rx</th>
+    <th>rx</th>
     <th>date</th>
     <th>hour</th>
     <th>usage minutes </th>
   </tr>
 
-<% @rx_by_hours.each do |rx_by_hour| %>
-  <tr>
-     <td><%=rx_by_hour.rx%></td>
-    <td><%=rx_by_hour.date1%></td>
-    <td><%=rx_by_hour.hour%></td>
-    <td><%= "%.2f" % (((rx_by_hour.count_seconds).to_f)/60)%> </td>
-   
-  </tr>
-<% end %>
+  <% @rx_by_hours.each do |rx_by_hour| %>
+    <tr>
+      <td><%=rx_by_hour.rx%></td>
+      <td><%=rx_by_hour.date1%></td>
+      <td><%=rx_by_hour.hour%></td>
+      <td><%= "%.2f" % (((rx_by_hour.count_seconds).to_f)/60)%> </td>
+
+    </tr>
+  <% end %>
 </table>
 
 <br />

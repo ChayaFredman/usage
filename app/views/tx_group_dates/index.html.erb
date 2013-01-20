@@ -1,39 +1,39 @@
- <%= javascript_include_tag "highcharts" %>
+<%= javascript_include_tag "highcharts" %>
 
-<h1>show to every day the count of usage with every tx</h1>
+<h1>Daily usage summary for each TX</h1>
 <br>
 <br>
 
- <table class="table" id="table_tx" >
-   <thead>
-   <tr class="tr1">
-     <th>date</th> 
-    <th>details</th>
- </tr>
-</thead>
- <% @records["tx_by_days"].each do |tx_by_day| %>
-  <tbody>
-   <tr class="tr2">
-      <th class="tt"><%=tx_by_day.date1%></th>
-      <td>
+<table class="table" id="table_tx">
+  <thead>
+    <tr class="tr1">
+      <th>date</th> 
+      <th>details</th>
+    </tr>
+  </thead>
+  <% @records["tx_by_days"].each do |tx_by_day| %>
+    <tbody>
+      <tr class="tr2">
+        <th class="tt"><%=tx_by_day.date1%></th>
+        <td>
           <table id="tdetails">
-              <tr>
-                  <th>tx</th>
-                  <th>minutes</th>
-              </tr>
-              <% @records["tx_aa"].each do |tx1| if tx1.date1==tx_by_day.date1 %>
+            <tr>
+              <th>tx</th>
+              <th>minutes</th>
+            </tr>
+            <% @records["tx_aa"].each do |tx1| if tx1.date1 == tx_by_day.date1 %>
 
-              <tr class="trr">    
-                  <th class="thh"><%=tx1.tx%></th>
-                  <td class="tdd"><%="%.2f" %((tx1.count_minutes.to_f)/60)%></td>
-              </tr>
-              <%end 
-    end  %>
-          </table>
+            <tr class="trr">    
+              <th class="thh"><%=tx1.tx%></th>
+              <td class="tdd"><%="%.2f" %((tx1.count_minutes.to_f)/60)%></td>
+            </tr>
+            <%end 
+          end  %>
+        </table>
       </td>
-   </tr>
- 
- <% end %>
- </tbody>
- </table>
- <div id="container"></div>
+    </tr>
+
+  <% end %>
+</tbody>
+</table>
+<div id="container"></div>

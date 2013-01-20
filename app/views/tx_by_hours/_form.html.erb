@@ -1,33 +1,33 @@
 <%= form_for(@tx_by_hour) do |f| %>
-  <% if @tx_by_hour.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@tx_by_hour.errors.count, "error") %> prohibited this tx_by_hour from being saved:</h2>
+<% if @tx_by_hour.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@tx_by_hour.errors.count, "error") %> prohibited this tx_by_hour from being saved:</h2>
 
-      <ul>
+    <ul>
       <% @tx_by_hour.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+      <li><%= msg %></li>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
+    </ul>
+  </div>
+<% end %>
 
-   <div class="field">
-   <%= f.label :tx %><br />
-    <%= f.text_field :tx %>
-  </div>
-  <div class="field">
-    <%= f.label :date1 %><br />
-    <%= f.text_field :date1 %>
-  </div>
-  <div class="field">
-    <%= f.label :hour %><br />
-    <%= f.text_field :hour %>
-  </div>
-  <div class="field">
-    <%= f.label :count_seconds %><br />
-    <%= f.text_field :count_seconds %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<div class="field">
+  <%= f.label :tx %><br />
+  <%= f.text_field :tx %>
+</div>
+<div class="field">
+  <%= f.label :date1 %><br />
+  <%= f.text_field :date1 %>
+</div>
+<div class="field">
+  <%= f.label :hour %><br />
+  <%= f.text_field :hour %>
+</div>
+<div class="field">
+  <%= f.label :count_seconds %><br />
+  <%= f.text_field :count_seconds %>
+</div>
+<div class="actions">
+  <%= f.submit %>
+</div>
 <% end %>
